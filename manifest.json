@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "TV Show Search",
+  "version": "1.0.0",
+  "description": "Search All Your Favourite TV Shows !",
+  "icons": {
+    "16": "icon.jpg",
+    "32": "icon.jpg",
+    "48": "icon.jpg",
+    "128": "icon.jpg"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.jpg",
+      "32": "icon.jpg",
+      "48": "icon.jpg",
+      "128": "icon.jpg"
+    },
+    "default_title": "TV Show Search",
+    "default_icon": "icon.jpg",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": ["contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
