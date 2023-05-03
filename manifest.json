@@ -4,22 +4,28 @@
   "version": "1.0.0",
   "description": "Search All Your Favourite TV Shows !",
   "icons": {
-    "16": "./tv.png",
-    "32": "./tv.png",
-    "48": "./tv.png",
-    "128": "./tv.png"
+    "16": "168843.png",
+    "32": "168843.png",
+    "48": "168843.png",
+    "128": "168843.png"
   },
   "action": {
     "default_title": "TV Show Search",
     "default_icon": {
-      "16": "./tv.png",
-      "32": "./tv.png",
-      "48": "./tv.png",
-      "128": "./tv.png"
+      "16": "168843.png",
+      "32": "168843.png",
+      "48": "168843.png",
+      "128": "168843.png"
     },
     "default_popup": "popup/popup.html"
   },
-  "permissions": ["contextMenus","search","tabs"],
+  "permissions": ["contextMenus","search","tabs","activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   }
